@@ -1,0 +1,25 @@
+I am building a normal and a case class in parallel below explaining the differences and specialties of both classes between them.
+Declaration
+Case classes are declared with keyword case unlike normal classes. The keyword case represents its application in pattern matching which 
+will be discussed further below.
+
+Instantiation
+When a class is created as a case class, scala promptly creates the class along with its companion object and implements the apply method.
+So, the instances of a case class can be created without the keyword new.
+
+Immutability
+When a class is created as a case class, scala prefixes all arguments in the parameters list with val and so the class becomes immutable.
+The val keyword is optional.
+
+Copying Objects
+When a class is created as a case class, scala also generates a copy method for the class and helps in creating another instance by
+retaining some arguments.
+
+Comparison
+	When a class is created as a case class, scala implements the equal method along with hashCode and toString methods. 
+  Hence, when two case objects are compared, the values are compared and the result would show whether the values are equal or not.
+  Conversely, normal classes compare by memory reference and show that the objects are unequal.
+
+Pattern Matching
+When a class is created as a case class, scala promptly generates the unapply method which makes pattern matching available for case 
+classes. The below example explains why case class is naturally suited for pattern matching.
