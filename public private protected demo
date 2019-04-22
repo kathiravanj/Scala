@@ -1,0 +1,42 @@
+class publicDemo{
+     var public_variable: Int = 10
+     def display_public_var(){  
+         println("Public variable is: " + public_variable)  
+     }  
+}  
+
+class privateDemo{
+     private var private_variable :Int = 100
+     def display_private_var(){  
+         println("Private variable is: " + private_variable)
+     }  
+}  
+
+class protectedDemo{
+     protected var protected_variable : Int = 1000
+}  
+
+class subProtectedDemo extends protectedDemo{  
+     def display_protected_var(){  
+         println("Protected variable is: " + protected_variable)  
+     } 
+}  
+
+object publicDemoObj{  
+    def main(args:Array[String]){  
+        var disp_public = new publicDemo()  
+        disp_public.display_public_var() // able to invoke public function and diplay public variable
+        disp_public.public_variable = 11 // able to access public variable
+        disp_public.display_public_var()  
+        
+        var disp_private = new privateDemo() 
+        disp_private.display_private_var() // able to invoke public function
+        disp_private.private_variable = 101 // Not able to access private variable
+        
+        var disp_protected = new protectedDemo()
+        disp_protected.protected_variable = 1001 // Not able to access protected variable
+        
+        var disp_subprotected = new subProtectedDemo()
+        disp_subprotected.display_protected_var() // able to invoke public function of subclass and show protected var
+    }  
+}  
