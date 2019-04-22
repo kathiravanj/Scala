@@ -1,0 +1,15 @@
+  def joinTuple: (Int, String, String, String, Int) = {
+    val tup1 = (1, "apple", "Red")
+		val tup2 = ("Orange", 11)
+		println("First tuple is: " + tup1)
+		println("Second tuple is: " + tup2)
+		val list1 = tup1.productIterator.mkString(",")
+		val list2 = tup2.productIterator.mkString(",")
+		
+    var joinedString: String = list1 + "," + list2
+    val joinedList: List[String] = joinedString.split(",").toList
+    val joinedTuple = joinedList match {
+      case List(a, b, c, e, f) => (a.toInt, b, c, e, f.toInt)
+    }
+    joinedTuple
+  }
