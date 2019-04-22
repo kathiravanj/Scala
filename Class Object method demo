@@ -1,0 +1,14 @@
+class mathfun{
+	def addn(num1: Int, num2: Int) : Int = num1 + num2
+	def subn(num1: Int, num2: Int) : Int = num1 - num2
+	def muln(num1: Int, num2: Int) : Int = num1 * num2
+}
+
+object mathfun{
+	def main(args: Array[String]){
+		val objmathfun = new mathfun
+		println("Adding 50 and 20: " + objmathfun.addn(50,20))
+		println("Subtracting 50 and 20: " + objmathfun.subn(50,20))
+		println("Mutliplying 50 and 20: " + objmathfun.muln(50,20))
+	}
+}
