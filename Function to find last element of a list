@@ -1,0 +1,4 @@
+  def lastElementList[A](getList: List[A]): A = {
+    if (getList.isEmpty) throw new NoSuchElementException
+    getList.last
+  }
