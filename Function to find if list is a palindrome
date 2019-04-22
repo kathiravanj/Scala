@@ -1,0 +1,3 @@
+  def isPalindromeList[C](getList: List[C]):Boolean = {
+    getList == getList.reverse
+  }
