@@ -1,0 +1,4 @@
+def lastButOneElementList[B](getList:List[B]):B = {
+    if (getList.isEmpty) throw new NoSuchElementException  
+    getList.init.last
+  }
